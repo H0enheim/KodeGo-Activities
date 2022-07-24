@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>CSS_GRID2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width, initial-scale-1.0">
+        <style>
+			body{
+				margin: 0px;
+				padding: 0px;
+			}
+            .header { grid-area: header;
+             }
+	        .main { grid-area: main;
+                    display: flex;
+                    background-color: DodgerBlue;
+                   	flex-wrap: wrap;
+					margin: 20px;
+                    
+            }
+            .main > div{
+                background-color: #f1f1f1;
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+             }
+            .footer { grid-area: footer;
+             }  
+
+            .grid-container {
+                    display: grid;
+                    grid-template-areas:
+                        'header header header header header header'
+                        'left main main main main right'
+                        'footer footer footer footer footer footer';
+                    gap: 10px;
+                    background-color: #2196F3;
+            }
+            .grid-container > div { 
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            }
+			
+			.main img{
+				width: 200px;
+				height: 250px; 
+			}
+			
+			#item1-link, #item2-link, #item3-link, #item4-link, #item5-link{
+				text-decoration: none;
+				color: white;
+				background-color: orange;
+				padding: 20px;
+			}
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container">
+          <div class="header">Header</div>
+          <div class="left">Left</div>
+          <div class="main">
+                <div>
+                    <img src="Screenshot 2022-07-08 110126.png" alt="item1" />
+					<h1></h1>
+					<p>₱9,389.00</p>
+					<a id="item1-link" href="#">Add to Cart</a>
+                </div>
+                <div>
+			  		<img src="Screenshot 2022-07-08 110222.png" alt="item1" />
+					<h1></h1>
+					<p>₱9,389.00</p>
+					<a id="item1-link" href="#">Add to Cart</a></div>
+                <div>
+			  <img src="Screenshot 2022-07-08 110245.png" />
+					<h1></h1>
+					<p>₱3,199.00</p>
+					<a id="item2-link" href="#">Add to Cart</a>
+			  </div>
+                <div>
+					<img src="Screenshot 2022-07-08 110304.png" alt="item1" />
+					<h1></h1>
+					<p>₱3,099.00</p>
+					<a id="item4-link" href="#">Add to Cart</a></div>
+                <div>
+			  <img src="Screenshot 2022-07-08 110352.png" alt="item1" />
+					<h1></h1>
+					<p>₱3,199.00</p>
+					<a id="item5-link" href="#">Add to Cart</a></div>
+            </div> 
+          <div class="right">Right</div>
+          <div class="footer">Footer</div>
+        </div>
+    </body>
+</html>
